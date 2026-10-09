@@ -1,0 +1,18 @@
+
+@media (max-width: 720px) {
+  .mobile-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    gap: 24px;
+    padding: 12px 18px;
+  }
+
+  .mobile-nav a {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
