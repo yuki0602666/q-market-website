@@ -1,6 +1,14 @@
+
+import type { Metadata } from "next";
 import Image from "next/image";
 import HomeNews from "@/components/HomeNews";
 import "./home-news.css";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const features = [
   {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "運営団体について | Q-Market",
   description:
     "Q-Marketの理念、設立背景、運営方針、今後の展望をご紹介します。九大生のための新しいマーケットプレイスを目指しています。",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const values = [

@@ -29,12 +29,19 @@ export async function generateMetadata({
   if (!article) {
     return {
       title: "記事が見つかりません | Q-Market",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
   return {
     title: `${article.title} | Q-Market`,
     description: article.summary,
+    alternates: {
+      canonical: `/news/${article.slug}`,
+    },
   };
 }
 

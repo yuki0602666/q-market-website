@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "運営団体情報 | Q-Market",
   description:
     "学生団体Q-Marketの組織形態、活動内容、運営体制および公式お問い合わせ窓口をご案内します。",
+  alternates: {
+    canonical: "/operator",
+  },
 };
 
 const email = "q.market.campus@gmail.com";

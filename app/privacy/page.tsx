@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "プライバシーポリシー（準備中） | Q-Market",
   description:
     "学生団体Q-Marketの公式サイトにおける個人情報の取り扱いに関する公開準備中の方針です。",
+  alternates: {
+    canonical: "/privacy",
+  },
   robots: {
     index: false,
     follow: false,

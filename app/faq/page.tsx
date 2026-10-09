@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "よくある質問 | Q-Market",
   description:
     "Q-Marketのサービス、会員登録、出品・購入、決済、受け渡し、安全性などに関するよくある質問を掲載しています。",
+  alternates: {
+    canonical: "/faq",
+  },
 };
 
 export default function FAQPage() {

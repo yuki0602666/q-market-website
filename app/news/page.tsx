@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "お知らせ | Q-Market",
   description:
     "Q-Marketの最新情報、開発状況、プレスリリースなどのお知らせを掲載しています。",
+  alternates: {
+    canonical: "/news",
+  },
 };
 
 export default function NewsPage() {

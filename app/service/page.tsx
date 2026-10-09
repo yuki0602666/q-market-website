@@ -2,13 +2,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./service.css";
-
 export const metadata: Metadata = {
   title: "サービス紹介 | Q-Market",
   description:
-    "Q-Marketは九大生限定のフリマサービスです。学生生活に必要な教科書、家具、家電、自転車などを九大生同士でつなぐマーケットプレイスを開発しています。",
+    "Q-Marketは九大生向けフリマサービスの開発を進めています。教科書、家具、家電、自転車などを九大生同士でつなぐマーケットプレイスを目指しています。サービスは現在公開準備中です。",
+  alternates: {
+    canonical: "/service",
+  },
 };
-
 const features = [
   {
     number: "01",
@@ -35,7 +36,6 @@ const features = [
       "卒業や引っ越しで不要になったモノを、次の九大生へ。学生生活の中で使われるモノを循環させ、無駄を減らす新しい選択肢をつくります。",
   },
 ];
-
 const categories = [
   {
     icon: "📚",
@@ -68,7 +68,6 @@ const categories = [
     example: "学生生活に役立つアイテム",
   },
 ];
-
 const steps = [
   {
     number: "01",
@@ -89,7 +88,6 @@ const steps = [
       "合意した条件に従って取引を進め、商品を受け渡します。正式な決済手順は公開時に案内する予定です。",
   },
 ];
-
 const faqs = [
   {
     question: "Q-Marketは誰が利用できますか？",
@@ -122,7 +120,6 @@ const faqs = [
       "現在、公開時期は未定です。開発状況や今後の情報は公式Instagramなどで発信していきます。",
   },
 ];
-
 export default function ServicePage() {
   return (
     <main>
@@ -134,14 +131,12 @@ export default function ServicePage() {
           <span>SERVICE</span>
         </div>
       </div>
-
       {/* ファーストビュー */}
       <section className="service-hero">
         <div className="container service-hero-inner">
           <span className="service-eyebrow">
             OUR SERVICE
           </span>
-
           <h1>
             九大生のための、
             <br />
@@ -149,19 +144,16 @@ export default function ServicePage() {
               新しいマーケット。
             </span>
           </h1>
-
           <p>
             学生生活に必要なモノを、
             <br />
             もっと身近に、もっと便利に。
           </p>
-
           <span className="service-coming">
             SERVICE COMING SOON
           </span>
         </div>
       </section>
-
       {/* サービス概要 */}
       <section className="section service-intro">
         <div className="container">
@@ -169,13 +161,11 @@ export default function ServicePage() {
             <span className="section-label">
               WHAT IS Q-MARKET?
             </span>
-
             <h2>
               九大生と九大生を、
               <br />
               モノでつなぐ。
             </h2>
-
             <p>
               Q-Marketは、九州大学の学生を対象とした
               フリマサービスです。
@@ -184,12 +174,10 @@ export default function ServicePage() {
               「欲しい」をつなぐことを目指しています。
             </p>
           </div>
-
           <div className="service-concept">
             <div className="service-concept-symbol">
               Q<span>↗</span>
             </div>
-
             <div className="service-concept-text">
               <span>OUR VISION</span>
               <h3>近いから、つながる。</h3>
@@ -203,7 +191,6 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
       {/* 解決したい課題 */}
       <section className="section service-problem">
         <div className="container">
@@ -215,7 +202,6 @@ export default function ServicePage() {
               こんな経験、ありませんか？
             </h2>
           </div>
-
           <div className="service-problem-grid">
             <div className="service-problem-card">
               <span>01</span>
@@ -225,7 +211,6 @@ export default function ServicePage() {
                 できれば身近な先輩から譲ってもらいたい。
               </p>
             </div>
-
             <div className="service-problem-card">
               <span>02</span>
               <h3>引っ越しで家具を手放したい</h3>
@@ -234,7 +219,6 @@ export default function ServicePage() {
                 譲る相手が見つからない。
               </p>
             </div>
-
             <div className="service-problem-card">
               <span>03</span>
               <h3>配送が大変なモノを取引したい</h3>
@@ -244,7 +228,6 @@ export default function ServicePage() {
               </p>
             </div>
           </div>
-
           <div className="service-solution">
             <span>Q-MARKET SOLUTION</span>
             <h3>
@@ -259,7 +242,6 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
       {/* 3つの特徴 */}
       <section className="section service-features">
         <div className="container">
@@ -273,7 +255,6 @@ export default function ServicePage() {
               着目したサービスを目指します。
             </p>
           </div>
-
           <div className="service-feature-list">
             {features.map((feature) => (
               <article
@@ -283,11 +264,9 @@ export default function ServicePage() {
                 <div className="service-feature-number">
                   {feature.number}
                 </div>
-
                 <div className="service-feature-icon">
                   {feature.icon}
                 </div>
-
                 <div className="service-feature-content">
                   <span>{feature.subtitle}</span>
                   <h3>{feature.title}</h3>
@@ -298,7 +277,6 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
       {/* 取扱カテゴリー */}
       <section className="section service-categories">
         <div className="container">
@@ -312,7 +290,6 @@ export default function ServicePage() {
               取り扱うことを検討しています。
             </p>
           </div>
-
           <div className="service-category-grid">
             {categories.map((category) => (
               <article
@@ -327,14 +304,12 @@ export default function ServicePage() {
               </article>
             ))}
           </div>
-
           <p className="section-note">
             ※ 取扱カテゴリーは予定です。
             正式な出品条件や禁止品目は公開時にご案内します。
           </p>
         </div>
       </section>
-
       {/* 利用の流れ */}
       <section className="section service-flow">
         <div className="container">
@@ -348,7 +323,6 @@ export default function ServicePage() {
               想定しています。
             </p>
           </div>
-
           <div className="service-flow-grid">
             {steps.map((step) => (
               <article
@@ -363,14 +337,12 @@ export default function ServicePage() {
               </article>
             ))}
           </div>
-
           <p className="section-note">
             ※ サービスは現在開発中です。
             利用手順や決済方法は変更される場合があります。
           </p>
         </div>
       </section>
-
       {/* 安心安全への取り組み */}
       <section className="section service-safety">
         <div className="container service-safety-inner">
@@ -394,7 +366,6 @@ export default function ServicePage() {
               ※ 具体的な安全対策は現在検討中です。
             </p>
           </div>
-
           <div className="service-safety-box">
             <div>🛡️</div>
             <h3>SAFETY FIRST</h3>
@@ -405,7 +376,6 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
       {/* よくある質問 */}
       <section className="section service-faq">
         <div className="container">
@@ -415,7 +385,6 @@ export default function ServicePage() {
             </span>
             <h2>よくある質問</h2>
           </div>
-
           <div className="service-faq-list">
             {faqs.map((faq) => (
               <details
@@ -429,7 +398,6 @@ export default function ServicePage() {
                     ＋
                   </span>
                 </summary>
-
                 <div className="service-faq-answer">
                   <span>A.</span>
                   <p>{faq.answer}</p>
@@ -439,24 +407,20 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
       {/* 公開前案内 */}
       <section className="service-final-cta">
         <div className="container">
           <span>COMING SOON</span>
-
           <h2>
             九大生のための新しい選択肢を、
             <br />
             ただいま準備中。
           </h2>
-
           <p>
             Q-Marketは現在開発を進めています。
             <br />
             最新情報は公式Instagramをご確認ください。
           </p>
-
           <a
             href="https://www.instagram.com/qmarket_campus/"
             target="_blank"

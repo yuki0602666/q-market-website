@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "お問い合わせ | Q-Market",
   description:
     "学生団体Q-Marketへのお問い合わせ。サービスに関するご質問、改善のご提案、取材・広報、協業についてのお問い合わせはこちら。",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
