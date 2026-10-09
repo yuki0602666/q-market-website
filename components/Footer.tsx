@@ -20,6 +20,7 @@ export default function Footer() {
                 height={42}
                 className="brand-logo"
               />
+
               <span className="brand-name">
                 Q-Market
               </span>
@@ -43,7 +44,11 @@ export default function Footer() {
               </Link>
 
               <Link href="/about">
-                運営団体
+                運営団体紹介
+              </Link>
+
+              <Link href="/operator">
+                運営団体情報
               </Link>
 
               <Link href="/faq">
