@@ -6,7 +6,7 @@ import "./operator.css";
 export const metadata: Metadata = {
   title: "運営団体情報 | Q-Market",
   description:
-    "学生団体Q-Marketの活動内容、基本情報、公式お問い合わせ窓口をご案内します。",
+    "学生団体Q-Marketの組織形態、活動内容、運営体制および公式お問い合わせ窓口をご案内します。",
 };
 
 const email = "q.market.campus@gmail.com";
@@ -14,11 +14,16 @@ const email = "q.market.campus@gmail.com";
 const information = [
   {
     label: "団体名",
-    value: "Q-Market",
+    value: "学生団体 Q-Market",
   },
   {
     label: "組織形態",
-    value: "学生団体",
+    value: "任意団体（法人格なし）",
+  },
+  {
+    label: "運営体制",
+    value:
+      "会則に基づき、代表者および各役職を設置",
   },
   {
     label: "活動内容",
@@ -34,8 +39,12 @@ const information = [
     value: "九州大学の学生（九大生）",
   },
   {
-    label: "お問い合わせ",
+    label: "公式メールアドレス",
     value: email,
+  },
+  {
+    label: "公式Instagram",
+    value: "@qmarket_campus",
   },
 ];
 
@@ -61,7 +70,9 @@ export default function OperatorPage() {
 
           <h1>
             運営団体
-            <span className="gradient-text">情報</span>
+            <span className="gradient-text">
+              情報
+            </span>
           </h1>
 
           <p>
@@ -93,6 +104,14 @@ export default function OperatorPage() {
               必要としている次の学生へつなぐことを
               目指しています。
             </p>
+
+            <p>
+              現在は法人格を持たない任意団体として、
+              会則に基づき代表者および各役職を
+              設置して活動しています。
+              将来的なサービスの公開に向けて、
+              開発・運営準備を進めています。
+            </p>
           </div>
 
           <div className="operator-table">
@@ -103,9 +122,19 @@ export default function OperatorPage() {
               >
                 <strong>{item.label}</strong>
 
-                {item.label === "お問い合わせ" ? (
+                {item.label ===
+                "公式メールアドレス" ? (
                   <a href={`mailto:${email}`}>
                     {item.value}
+                  </a>
+                ) : item.label ===
+                  "公式Instagram" ? (
+                  <a
+                    href="https://www.instagram.com/qmarket_campus/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.value} ↗
                   </a>
                 ) : (
                   <span>{item.value}</span>
@@ -118,10 +147,10 @@ export default function OperatorPage() {
             <h3>九州大学との関係について</h3>
 
             <p>
-              Q-Marketは九州大学の学生を対象とした
-              独立したプロジェクトです。
-              九州大学が公式に運営している
-              サービスではありません。
+              Q-Marketは、九州大学の学生を
+              対象とした独立した学生団体です。
+              九州大学が公式に運営・提供・公認する
+              サービスであることを示すものではありません。
             </p>
           </div>
 
@@ -134,18 +163,24 @@ export default function OperatorPage() {
               <h2>公式お問い合わせ窓口</h2>
 
               <p>
-                ご質問、取材、協業に関する
-                ご相談などは、公式メールアドレスへ
-                お問い合わせください。
+                サービスに関するご質問、
+                取材・広報、協業に関する
+                ご相談などを受け付けています。
+              </p>
+
+              <p>
+                お問い合わせフォームから、
+                Q-Market運営窓口へ
+                直接ご連絡いただけます。
               </p>
             </div>
 
-            <a
-              href={`mailto:${email}`}
+            <Link
+              href="/contact"
               className="operator-email"
             >
-              メールで問い合わせる ↗
-            </a>
+              お問い合わせフォームへ ↗
+            </Link>
           </div>
 
           <div className="operator-notice">
@@ -154,14 +189,17 @@ export default function OperatorPage() {
             <p>
               お問い合わせで受け取った情報は、
               対応に必要な範囲で取り扱います。
-              個人情報の取り扱いに関する詳細は、
-              プライバシーポリシーをご確認ください。
+              問い合わせ情報は原則として
+              対応完了後1年間保存し、
+              保存期間の経過後に削除する
+              運用方針としています。
             </p>
 
             <p>
-              運営責任者情報、所在地、正式な管理体制など
-              未確定の事項については、
-              一般公開までに整理を進めます。
+              運営団体に関する法令上必要な情報の
+              提供方法や、個人情報の具体的な
+              管理・削除手順については、
+              一般公開前に確認・整備を進めています。
             </p>
 
             <Link href="/privacy">
