@@ -1,0 +1,320 @@
+
+/* ========================================
+   Q-Market Responsive Polish
+   STEP 17-4
+======================================== */
+
+/* 共通：横方向のはみ出し防止 */
+
+html {
+  min-width: 320px;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-width: 320px;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+.container {
+  min-width: 0;
+}
+
+/* 長いURLや英単語の折り返し */
+
+main p,
+main h1,
+main h2,
+main h3,
+main a {
+  overflow-wrap: break-word;
+}
+
+/* キーボード操作時の視認性 */
+
+main a:focus-visible,
+main button:focus-visible {
+  outline: 3px solid #0faaa5;
+  outline-offset: 3px;
+}
+
+/* ========================================
+   Tablet: 601px - 1024px
+======================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .hero h1 {
+    font-size: clamp(35px, 5.3vw, 55px);
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(26px, 3.4vw, 36px);
+    line-height: 1.55;
+  }
+
+  .feature-grid,
+  .steps-grid {
+    gap: 18px;
+  }
+
+  .category-grid {
+    gap: 14px;
+  }
+
+  .organization-inner {
+    gap: 30px;
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+
+  .explore-card {
+    min-height: 250px;
+  }
+}
+
+/* ========================================
+   Mobile: up to 600px
+======================================== */
+
+@media (max-width: 600px) {
+
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  /* Sections */
+
+  .section {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(24px, 6.8vw, 31px);
+    line-height: 1.55;
+    letter-spacing: -0.6px;
+  }
+
+  .section-heading p {
+    font-size: 13px;
+    line-height: 1.95;
+  }
+
+  /* Hero */
+
+  .hero h1 {
+    font-size: clamp(30px, 8.3vw, 43px);
+    line-height: 1.5;
+    letter-spacing: -0.7px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .hero-eyebrow {
+    overflow-wrap: anywhere;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-actions .button {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Cards */
+
+  .feature-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+    gap: 11px;
+  }
+
+  .category-card {
+    min-width: 0;
+  }
+
+  /* Organization */
+
+  .organization-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .organization-visual {
+    min-width: 0;
+  }
+
+  /* News */
+
+  .home-news-item {
+    min-width: 0;
+  }
+
+  .home-news-content {
+    min-width: 0;
+  }
+
+  /* Explore links */
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-card {
+    min-width: 0;
+  }
+
+  /* Forms */
+
+  .contact-field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-field input,
+  .contact-field select,
+  .contact-field textarea {
+    font-size: 16px;
+  }
+
+  /* FAQ */
+
+  .faq-category-filters {
+    gap: 8px;
+  }
+
+  .faq-category-button {
+    min-height: 40px;
+  }
+
+  .faq-question-text {
+    min-width: 0;
+  }
+
+  /* Privacy */
+
+  .privacy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-operator-table > div {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Small Mobile: up to 380px
+======================================== */
+
+@media (max-width: 380px) {
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  .category-grid {
+    gap: 8px;
+  }
+
+  .category-card {
+    padding: 15px 10px;
+  }
+
+  .category-icon {
+    font-size: 26px;
+  }
+
+  .explore-card {
+    padding: 19px;
+  }
+
+  .qm-mobile-menu-inner {
+    width: calc(100% - 30px);
+  }
+
+  .faq-category-button {
+    font-size: 10px;
+    padding: 9px 11px;
+  }
+
+  .privacy-sidebar nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Large Desktop: 1440px+
+======================================== */
+
+@media (min-width: 1440px) {
+
+  .explore-section,
+  .faq-main-section,
+  .contact-main-section,
+  .privacy-main {
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+
+  .explore-grid {
+    gap: 22px;
+  }
+}
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+}

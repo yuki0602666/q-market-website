@@ -1,0 +1,294 @@
+
+/* ========================================
+   Q-Market Explore Links
+======================================== */
+
+.explore-section {
+  --explore-navy: #142c43;
+  --explore-blue: #137bc2;
+  --explore-teal: #12b9ae;
+
+  background: #f7fafc;
+  padding: 100px 0 110px;
+}
+
+.explore-heading {
+  text-align: center;
+  margin-bottom: 47px;
+}
+
+.explore-eyebrow {
+  display: block;
+  color: var(--explore-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 17px;
+}
+
+.explore-heading h2 {
+  color: var(--explore-navy);
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 0 0 15px;
+}
+
+.explore-heading p {
+  color: #64778b;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* Cards */
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 295px;
+  padding: 26px 24px 22px;
+
+  background: #ffffff;
+  border: 1px solid #e2ebf1;
+  border-radius: 18px;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-5px);
+  border-color: #b5d8e8;
+  box-shadow: 0 17px 38px rgba(20, 74, 106, 0.09);
+}
+
+.explore-card:focus-visible {
+  outline: 3px solid var(--explore-teal);
+  outline-offset: 4px;
+}
+
+.explore-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.explore-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 57px;
+  height: 57px;
+
+  color: var(--explore-blue);
+  background: linear-gradient(
+    125deg,
+    #e9f5ff,
+    #e6f9f5
+  );
+
+  border-radius: 15px;
+}
+
+.explore-number {
+  font-size: 11px;
+  font-weight: 800;
+  color: #a1b0bd;
+}
+
+.explore-card-content {
+  flex: 1;
+}
+
+.explore-card-english {
+  display: block;
+  color: #1697ad;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 11px;
+}
+
+.explore-card-content h3 {
+  color: var(--explore-navy);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 0 0 11px;
+}
+
+.explore-card-content p {
+  color: #64778b;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.explore-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #edf1f4;
+  margin-top: 25px;
+  padding-top: 18px;
+
+  color: var(--explore-blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.explore-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: #ebf7fa;
+  border-radius: 50%;
+  font-size: 17px;
+
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.explore-card:hover .explore-arrow {
+  background: #d9f1f0;
+  transform: translate(2px, -2px);
+}
+
+/* News link */
+
+.explore-news-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.explore-news-link > span {
+  color: #64778b;
+  font-size: 13px;
+}
+
+.explore-news-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--explore-blue);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.explore-news-link a:hover {
+  text-decoration: underline;
+}
+
+.explore-news-link a:focus-visible {
+  outline: 2px solid var(--explore-teal);
+  outline-offset: 4px;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .explore-card {
+    min-height: 260px;
+  }
+}
+
+/* Smartphone */
+
+@media (max-width: 600px) {
+  .explore-section {
+    padding: 70px 0 80px;
+  }
+
+  .explore-heading {
+    margin-bottom: 30px;
+  }
+
+  .explore-heading h2 {
+    font-size: 27px;
+  }
+
+  .explore-heading p {
+    font-size: 12px;
+  }
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .explore-card {
+    min-height: 0;
+    padding: 23px;
+  }
+
+  .explore-card-top {
+    margin-bottom: 20px;
+  }
+
+  .explore-icon {
+    width: 49px;
+    height: 49px;
+  }
+
+  .explore-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .explore-card-content h3 {
+    font-size: 18px;
+  }
+
+  .explore-card-bottom {
+    margin-top: 22px;
+  }
+
+  .explore-news-link {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 35px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-card,
+  .explore-arrow {
+    transition: none;
+  }
+
+  .explore-card:hover,
+  .explore-card:hover .explore-arrow {
+    transform: none;
+  }
+}

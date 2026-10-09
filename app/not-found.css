@@ -1,0 +1,162 @@
+
+/* ========================================
+   Q-Market 404 Page
+======================================== */
+
+.qm-not-found {
+  position: relative;
+  overflow: hidden;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    125deg,
+    #edf8ff 0%,
+    #ffffff 48%,
+    #e7faf5 100%
+  );
+
+  padding: 90px 0 110px;
+  text-align: center;
+}
+
+.qm-not-found-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.qm-not-found-decoration {
+  margin-bottom: -38px;
+}
+
+.qm-not-found-decoration span {
+  display: block;
+  font-size: clamp(125px, 21vw, 270px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -13px;
+
+  background: linear-gradient(
+    110deg,
+    rgba(19, 123, 194, 0.1),
+    rgba(18, 185, 174, 0.13)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.qm-not-found-eyebrow {
+  position: relative;
+  display: block;
+  color: #137bc2;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.qm-not-found h1 {
+  color: #142c43;
+  font-size: clamp(29px, 4.2vw, 47px);
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.qm-not-found-description {
+  max-width: 650px;
+  margin: 24px auto 36px;
+  color: #64778b;
+  font-size: 14px;
+  line-height: 2.2;
+}
+
+.qm-not-found-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.qm-not-found-help {
+  margin: 55px auto 0;
+  padding-top: 29px;
+  max-width: 420px;
+  border-top: 1px solid #dce9ef;
+}
+
+.qm-not-found-help > span {
+  display: block;
+  color: #137bc2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 13px;
+}
+
+.qm-not-found-help p {
+  color: #64778b;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.qm-not-found-help a {
+  margin: 0 4px;
+  font-weight: 800;
+  color: #137bc2;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 720px) {
+  .qm-not-found {
+    min-height: 70vh;
+    padding: 75px 0 90px;
+  }
+
+  .qm-not-found-decoration {
+    margin-bottom: -20px;
+  }
+
+  .qm-not-found-decoration span {
+    font-size: clamp(110px, 30vw, 165px);
+    letter-spacing: -7px;
+  }
+
+  .qm-not-found-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .qm-not-found h1 {
+    font-size: clamp(25px, 7vw, 33px);
+  }
+
+  .qm-not-found-description {
+    font-size: 12px;
+    line-height: 2.1;
+    margin: 22px auto 30px;
+  }
+
+  .qm-not-found-description br {
+    display: none;
+  }
+
+  .qm-not-found-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .qm-not-found-actions .button {
+    justify-content: center;
+  }
+
+  .qm-not-found-help {
+    margin-top: 40px;
+  }
+}

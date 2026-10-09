@@ -1,18 +1,292 @@
 
-@media (max-width: 720px) {
-  .mobile-nav {
-    justify-content: flex-start;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
-    gap: 24px;
-    padding: 12px 18px;
+/* ========================================
+   Q-Market Navigation
+   Desktop / Mobile Menu
+======================================== */
+
+/* Hamburger button: hidden on desktop */
+
+.qm-menu-button {
+  display: none;
+  appearance: none;
+  border: 1px solid #dce8ef;
+  background: #ffffff;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+  z-index: 101;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.qm-menu-button:hover {
+  background: #f0f8fc;
+  border-color: #b9d8e8;
+}
+
+.qm-menu-button:focus-visible {
+  outline: 3px solid #12b9ae;
+  outline-offset: 3px;
+}
+
+.qm-menu-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #142c43;
+  border-radius: 10px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+  transform-origin: center;
+}
+
+/* Three lines become X */
+
+.qm-menu-button.is-active .qm-menu-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.qm-menu-button.is-active .qm-menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.qm-menu-button.is-active .qm-menu-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.qm-menu-button.is-active {
+  background: #eaf7f9;
+  border-color: #b6dfe0;
+}
+
+.qm-menu-button.is-active .qm-menu-line {
+  background: #118d91;
+}
+
+/* Mobile menu hidden on desktop */
+
+.qm-mobile-menu {
+  display: none;
+}
+
+/* ========================================
+   Tablet and Mobile
+======================================== */
+
+@media (max-width: 900px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
   }
 
-  .mobile-nav a {
+  .site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    gap: 16px;
+  }
+
+  .site-header .desktop-nav,
+  .site-header .header-contact,
+  .site-header .mobile-nav {
+    display: none;
+  }
+
+  .qm-menu-button {
+    display: flex;
+  }
+
+  /* Menu panel */
+
+  .qm-mobile-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    background: #ffffff;
+    border-top: 1px solid #e5edf2;
+    box-shadow: 0 25px 45px rgba(18, 55, 82, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  .qm-mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .qm-mobile-menu-inner {
+    width: min(100% - 40px, 620px);
+    margin: 0 auto;
+    padding: 28px 0 36px;
+  }
+
+  .qm-mobile-menu-label {
+    display: block;
+    color: #137bc2;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 19px;
+  }
+
+  /* Each navigation link */
+
+  .qm-mobile-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    min-height: 61px;
+    padding: 16px 8px;
+    border-bottom: 1px solid #e9eef2;
+    color: #142c43;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      padding-left 0.2s;
+  }
+
+  .qm-mobile-menu-link:hover {
+    background: #f5fbfd;
+    color: #137bc2;
+    padding-left: 14px;
+  }
+
+  .qm-mobile-menu-link.is-current {
+    color: #087f91;
+  }
+
+  .qm-mobile-menu-link:focus-visible {
+    outline: 2px solid #12b9ae;
+    outline-offset: -2px;
+  }
+
+  .qm-mobile-menu-number {
+    color: #98aebe;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    width: 24px;
     flex-shrink: 0;
-    white-space: nowrap;
+  }
+
+  .qm-mobile-menu-link.is-current
+    .qm-mobile-menu-number {
+    color: #0ca9a0;
+  }
+
+  .qm-mobile-menu-arrow {
+    margin-left: auto;
+    color: #137bc2;
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  /* Social link */
+
+  .qm-mobile-menu-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 32px;
+    padding: 23px;
+    background: linear-gradient(
+      125deg,
+      #eef8ff,
+      #eafbf6
+    );
+    border-radius: 14px;
+  }
+
+  .qm-mobile-menu-bottom > span {
+    color: #7b98aa;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  .qm-mobile-menu-bottom a {
+    color: #087f91;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .qm-mobile-menu-bottom a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ========================================
+   Small Smartphones
+======================================== */
+
+@media (max-width: 480px) {
+  .site-header .header-inner {
+    min-height: 67px;
+  }
+
+  .site-header .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-header .brand-name {
+    font-size: 18px;
+  }
+
+  .qm-menu-button {
+    width: 43px;
+    height: 43px;
+  }
+
+  .qm-mobile-menu {
+    max-height: calc(100dvh - 67px);
+  }
+
+  .qm-mobile-menu-link {
+    min-height: 57px;
+    font-size: 14px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .qm-menu-button,
+  .qm-menu-line,
+  .qm-mobile-menu,
+  .qm-mobile-menu-link {
+    transition: none !important;
   }
 }
