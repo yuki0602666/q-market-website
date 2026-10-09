@@ -1,3 +1,4 @@
+import Image from "next/image";
 import HomeNews from "@/components/HomeNews";
 import "./home-news.css";
 
@@ -136,7 +137,18 @@ export default function Home() {
 
           <div className="about-highlight">
             <div className="highlight-icon">
-              Q<span>↗</span>
+              <Image
+                src="/qmarket-logo.png"
+                alt="Q-Market公式ロゴ"
+                width={120}
+                height={120}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  borderRadius: "20px",
+                }}
+              />
             </div>
 
             <div>
@@ -304,9 +316,26 @@ export default function Home() {
 
           <div className="organization-visual">
             <span>BUILDING THE FUTURE</span>
-            <strong>
-              Q<span>↗</span>
-            </strong>
+
+            <div
+              style={{
+                width: "180px",
+                height: "180px",
+                position: "relative",
+                margin: "0 auto",
+              }}
+            >
+              <Image
+                src="/qmarket-logo.png"
+                alt="Q-Market公式ロゴ"
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+                sizes="180px"
+              />
+            </div>
+
             <p>FOR KYUSHU UNIVERSITY STUDENTS</p>
           </div>
         </div>
