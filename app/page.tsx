@@ -1,3 +1,5 @@
+import HomeNews from "@/components/HomeNews";
+import "./home-news.css";
 
 const features = [
   {
@@ -91,6 +93,7 @@ export default function Home() {
               Q-Marketについて
               <span aria-hidden="true">↗</span>
             </a>
+
             <a
               href="https://www.instagram.com/qmarket_campus/"
               target="_blank"
@@ -116,11 +119,13 @@ export default function Home() {
             <span className="section-label">
               ABOUT Q-MARKET
             </span>
+
             <h2>
               九大生の「もったいない」を、
               <br />
               次の「ほしい」へ。
             </h2>
+
             <p>
               引っ越しや卒業、授業やサークル活動。
               学生生活の中で、必要なモノは変わっていきます。
@@ -173,9 +178,11 @@ export default function Home() {
                 <span className="feature-number">
                   {feature.number}
                 </span>
+
                 <div className="feature-icon">
                   {feature.icon}
                 </div>
+
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
               </article>
@@ -190,9 +197,11 @@ export default function Home() {
             <span className="section-label">
               CATEGORIES
             </span>
+
             <h2>
               学生生活に必要なモノを、もっと身近に。
             </h2>
+
             <p>
               Q-Marketで取り扱いを検討している
               カテゴリーです。
@@ -232,7 +241,9 @@ export default function Home() {
             <span className="section-label">
               HOW IT WORKS
             </span>
+
             <h2>利用の流れ</h2>
+
             <p>
               Q-Marketでは、次のような取引体験を
               想定しています。
@@ -270,6 +281,7 @@ export default function Home() {
             <span className="section-label">
               WHO WE ARE
             </span>
+
             <h2>
               九大生の手で、
               <br />
@@ -282,6 +294,7 @@ export default function Home() {
               学生生活の中で生まれる課題に向き合い、
               身近なところから新しい仕組みをつくっていきます。
             </p>
+
             <p>
               学生団体としての活動を出発点に、
               継続的に価値を届けられる事業への成長を
@@ -299,35 +312,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="news" className="section news-section">
-        <div className="container">
-          <div className="section-heading">
-            <span className="section-label">
-              NEWS & UPDATES
-            </span>
-            <h2>お知らせ</h2>
-          </div>
-
-          <div className="news-item">
-            <span className="news-tag">お知らせ</span>
-
-            <div>
-              <h3>Q-Market公式サイトを準備中</h3>
-              <p>
-                Q-Marketは現在、サービス公開に向けた
-                開発と公式サイトの準備を進めています。
-              </p>
-            </div>
-
-            <span
-              className="news-arrow"
-              aria-hidden="true"
-            >
-              ↗
-            </span>
-          </div>
-        </div>
-      </section>
+      <HomeNews />
 
       <section id="contact" className="contact-section">
         <div className="container contact-inner">
